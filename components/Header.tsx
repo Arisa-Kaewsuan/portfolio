@@ -1,12 +1,17 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-
+import { motion } from "framer-motion";
 type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="bg-gray-700 h-100 flex items-center justify-between">
-      <div className="flex flex-row items-center">
+    <header className="flex items-center justify-between p-5 sticky top-0 max-w-7xl mx-auto">
+      <motion.div
+        initial={{ x: -500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-row items-center"
+      >
         <SocialIcon
           url="https://github.com/in/jaketrent"
           fgColor="gray"
@@ -36,16 +41,23 @@ export default function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ x: 500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-row items-center"
+      >
         <SocialIcon
           url="https://email.com/in/jaketrent"
           fgColor="gray"
           bgColor="transparent"
         />
-        GET IN TOUCH
-      </div>
+        <p className="font-bold  hidden md:inline-flex text-sm text-gray-400">
+          GET IN TOUCH
+        </p>
+      </motion.div>
     </header>
   );
 }
