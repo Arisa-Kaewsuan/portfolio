@@ -1,46 +1,51 @@
 import React from "react";
+import { SocialIcon } from "react-social-icons";
 
 type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <div className="bg-gray-700 h-screen ">
-      <div className="flex items-center justify-between">
-        <ul className="flex items-center justify-between">
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              github
-            </a>
-          </li>
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              linkedIn
-            </a>
-          </li>
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              leetcode
-            </a>
-          </li>
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              Behance
-            </a>
-          </li>
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              Medium
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li className="mr-6">
-            <a className="text-gray-400 hover:text-blue-800" href="#">
-              GET IN TOUCH
-            </a>
-          </li>
-        </ul>
+    <header className="bg-gray-700 h-100 flex items-center justify-between">
+      <div className="flex flex-row items-center">
+        <SocialIcon
+          url="https://github.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+
+        <SocialIcon
+          url="https://linkedin.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+
+        <SocialIcon
+          url="https://youtube.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+
+        <SocialIcon
+          url="https://behance.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+
+        <SocialIcon
+          url="https://medium.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
       </div>
-    </div>
+
+      <div>
+        <SocialIcon
+          url="https://email.com/in/jaketrent"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        GET IN TOUCH
+      </div>
+    </header>
   );
 }
