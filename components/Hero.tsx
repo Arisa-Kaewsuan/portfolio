@@ -10,7 +10,7 @@ const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
     words: [
       "Hi, My name is Maple.",
-      "I'm looking for React Developer Job !",
+      "I've done a mini project with react, react-native",
       "See my work below here!",
     ],
     loop: true,
