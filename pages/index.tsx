@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll ">
       <Head>
-        <title> mapleJourney </title>
+        <title> a.maple_journey </title>
       </Head>
 
       {/* Header */}
